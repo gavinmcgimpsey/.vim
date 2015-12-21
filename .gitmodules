@@ -1,0 +1,15 @@
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "bundle/sensible"]
+	path = bundle/sensible
+	url = git@github.com:tpope/vim-sensible.git
+[submodule "bundle/repeat"]
+	path = bundle/repeat
+	url = git@github.com:tpope/vim-repeat.git
+[submodule "bundle/solarized-theme"]
+	path = bundle/solarized-theme
+	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "bundle/hardmode"]
+	path = bundle/hardmode
+	url = git@github.com:wikitopian/hardmode.git
