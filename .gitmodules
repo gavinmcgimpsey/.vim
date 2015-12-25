@@ -13,3 +13,6 @@
 [submodule "bundle/hardmode"]
 	path = bundle/hardmode
 	url = git@github.com:wikitopian/hardmode.git
+[submodule "bundle/rainbow-parentheses"]
+	path = bundle/rainbow-parentheses
+	url = git@github.com:kien/rainbow_parentheses.vim.git
