@@ -51,10 +51,5 @@ au BufReadPost *.rkt, *rktl set filetype=racket
 au filetype racket set lisp
 au filetype racket set autoindent
 
-" Rainbow Parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 let g:airline_powerline_fonts = 1
+let g:rainbow_active = 1
