@@ -1,8 +1,9 @@
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
-colorscheme solarized
+
+syntax enable
 set background=dark
+colorscheme solarized
 
 set relativenumber
 set number
@@ -22,6 +23,8 @@ set autoindent
 
 let mapleader = "\<Space>"
 nnoremap <leader>w :w<CR>
+nnoremap <leader>] :bn<CR>
+nnoremap <leader>[ :bp<CR>
 
 " Move by visual lines rather than file lines
 nnoremap j gj
@@ -36,19 +39,22 @@ inoremap jk <esc>
 inoremap kj <esc>
 inoremap <esc> <nop>
 
+" CSS
 au FileType css setl background=light
 au FileType scss setl background=light
 
+" Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" Disable arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" Racket
+au BufReadPost *.rkt, *rktl set filetype=racket
+au filetype racket set lisp
+au filetype racket set autoindent
+
+" Rainbow Parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 let g:airline_powerline_fonts = 1
