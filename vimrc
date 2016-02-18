@@ -3,7 +3,7 @@ syntax on
 filetype plugin indent on
 
 set background=dark
-colorscheme solarized
+colorscheme my-solarized
 
 set relativenumber
 set number
@@ -30,10 +30,6 @@ nnoremap <leader>[ :bp<CR>
 nnoremap j gj
 nnoremap k gk
 
-" Hard Mode!
-nnoremap <leader>h <esc>:call ToggleHardMode()<cr>
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-
 " Change escape to jk in any order 
 inoremap jk <esc>
 inoremap kj <esc>
@@ -51,5 +47,6 @@ au BufReadPost *.rkt, *rktl set filetype=racket
 au filetype racket set lisp
 au filetype racket set autoindent
 
-let g:airline_powerline_fonts = 1
-let g:rainbow_active = 1
+let g:airline_powerline_fonts=1
+let g:rainbow_active=1
+let g:solarized_bold=0
