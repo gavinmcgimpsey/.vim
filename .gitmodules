@@ -19,3 +19,6 @@
 [submodule "bundle/one-dark"]
 	path = bundle/one-dark
 	url = git@github.com:geoffharcourt/one-dark.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git

@@ -35,10 +35,6 @@ inoremap jk <esc>
 inoremap kj <esc>
 inoremap <esc> <nop>
 
-" CSS
-au FileType css setl background=light
-au FileType scss setl background=light
-
 " Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
