@@ -47,10 +47,13 @@ set spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 au FileType markdown,text,tex set spell
 
+" Dash
+nmap <silent> <leader>dd <Plug>DashSearch
+
 " Ditto
 au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
 
-nmap <leader>dd <Plug>ToggleDitto      " Turn it on and off
+nmap <leader>dt <Plug>ToggleDitto      " Turn it on and off
 
 nmap <leader>dn <Plug>DittoNext       " Jump to the next word
 nmap <leader>dN <Plug>DittoPrev       " Jump to the previous word
