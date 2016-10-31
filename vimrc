@@ -30,9 +30,8 @@ nnoremap <leader>[ :bp<CR>
 nnoremap j gj
 nnoremap k gk
 
-" Change escape to jk in any order 
-inoremap jk <esc>
-inoremap kj <esc>
+" Change escape to fd
+inoremap fd <esc>
 inoremap <esc> <nop>
 
 " Markdown
@@ -42,6 +41,38 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 au BufReadPost *.rkt, *rktl set filetype=racket
 au filetype racket set lisp
 au filetype racket set autoindent
+
+" Spell check
+set spelllang=en
+set spellfile=$HOME/.vim/spell/en.utf-8.add
+au FileType markdown,text,tex set spell
+
+" Ditto
+au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
+
+nmap <leader>dd <Plug>ToggleDitto      " Turn it on and off
+
+nmap <leader>dn <Plug>DittoNext       " Jump to the next word
+nmap <leader>dN <Plug>DittoPrev       " Jump to the previous word
+nmap <leader>d= <Plug>DittoGood       " Ignore the word under the cursor
+nmap <leader>d- <Plug>DittoBad        " Stop ignoring the word under the cursor
+nmap <leader>dm <Plug>DittoMore       " Show the next matches
+nmap <leader>dl <Plug>DittoLess       " Show the previous matches
+let g:ditto_min_repetitions=2
+
+" Wordy
+nnoremap <leader>c :NextWordy<CR>
+let g:wordy#ring = [
+  \ 'weak',
+  \ ['contractions', 'opinion', 'vague-time', 'said-synonyms', ],
+  \ ['being', 'passive-voice', ],
+  \ ['problematic', 'redundant', ],
+  \ ['colloquial', 'idiomatic', 'similies', ],
+  \ 'business-jargon',
+  \ 'weasel',
+  \ 'puffery',
+  \ 'art-jargon',
+  \ ]
 
 let g:airline_powerline_fonts=1
 let g:rainbow_active=1
