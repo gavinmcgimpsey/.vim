@@ -31,3 +31,9 @@
 [submodule "bundle/jshint"]
 	path = bundle/jshint
 	url = git@github.com:Shutnik/jshint2.vim.git
+[submodule "bundle/vim-wordy"]
+	path = bundle/vim-wordy
+	url = git@github.com:reedes/vim-wordy.git
+[submodule "bundle/vim-ditto"]
+	path = bundle/vim-ditto
+	url = git@github.com:dbmrq/vim-ditto.git
