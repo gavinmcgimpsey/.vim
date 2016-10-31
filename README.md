@@ -1,4 +1,7 @@
-**Installation:**
+Installation
+============
+
+  Get this repo:
 
     git clone git://github.com/gavinmcgimpsey/.vim.git ~/.vim
 
@@ -13,7 +16,8 @@
     git submodule update --init
 
 
-**Installing new plugins:**
+Installing new plugins
+======================
 
     git submodule add <url> bundle/<plugin_name>
 
